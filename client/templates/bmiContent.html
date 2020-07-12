@@ -1,0 +1,65 @@
+<template name="bmi">
+    <div id="container">
+
+    <header>
+            <h1>BMI Calculator</h1>
+            <ul>
+            	<li><a href="/" class="navbutton">Home</a></li>
+            	<li><a href="/bmi" class="navbutton bmi currentpage_nav">BMI Calculator</a></li>
+            	<li><a href="/art" class="navbutton art">Art Experiments</a></li>
+            </ul>
+            <div class="dropdown_container">
+                <div class="dropdown" style="padding: 10px 20px 10px 20px; margin: 6px auto; cursor: pointer; background: #EAEDED; width: 160px;">
+                    Dropdown
+                    <div class="dropdown-content">
+                      <a href="/">Home</a>
+                      <a href="/bmi">BMI Calculator</a>
+                      <a href="/art">Art Experiments</a>
+                    </div>
+                </div> 
+            </div>
+        </header>
+        
+        <div id="mid">
+            <p style="font-size: 20px;">See what your BMI is by entering your height and weight.</p>
+            <div style="text-align: left; max-width: 350px; margin: 0 auto;">
+                <form name="calculate_bmi" id="calculate_bmi">
+                    <div style="font-size: 14px; color: #7e7e7e;">Height</div>
+                    <div>
+                        <input type="number" name="height_feet" id="height_feet" style="width: 50px;">feet
+                        <input type="number" name="height_inches" id="height_inches" style="width: 50px;">inches
+                        <div id="height_error"></div>
+                    </div>
+                    <div style="font-size: 14px; color: #7e7e7e;">Weight</div>
+                    <div>
+                        <input type="number" name="weight" id="Weight" style="width: 65px;">pounds
+                        <div id="weight_error"></div>
+                    </div>
+                    <p>Your BMI is: <input type="Text" name="display_bmi" id="display_bmi" placeholder="" size="3" readonly="readonly"><span id="bmi_range"></span></p>
+                    
+                    {{> calculateBMI}}
+                    
+                </form>
+                
+                <div style="background: #FFFFFF; margin: 20px 0px; border-radius: 6px; padding: 10px; font-size: 14px;">
+                    <div style="font-weight: bold; text-align: center;">BMI ranges</div>
+                    <table class="table_style">
+                        <tr><td class="cell_style cell_style_2">Less than 18.5</td><td class="cell_style">Underweight</td></tr>
+                        <tr><td class="cell_style cell_style_2">18.5 - 24.9</td><td class="cell_style">Normal weight</td></tr>
+                        <tr><td class="cell_style cell_style_2">25 - 29.9</td><td class="cell_style">Overweight</td></tr>
+                        <tr><td class="cell_style cell_style_2">Greater than 30</td><td class="cell_style">Obesity</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    
+    <div id="bottom" class="border"></div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script_bmi.js"></script>
+</template>
+
+<template name="calculateBMI">
+  <button>Calculate</button>
+</template>
