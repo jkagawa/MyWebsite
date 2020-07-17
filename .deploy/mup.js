@@ -27,8 +27,9 @@ module.exports = {
       // TODO: Change to your app's url
       // If you are using ssl, it needs to start with https://
       ROOT_URL: 'https://jkagawa.com',
-      MONGO_URL: 'mongodb://mongodb/meteor',
-      MONGO_OPLOG_URL: 'mongodb://mongodb/local',
+      MONGO_URL: 'mongodb://localhost/meteor',
+      PORT: 3000
+//      MONGO_OPLOG_URL: 'mongodb://localhost/local',
     },
 
     docker: {
@@ -42,7 +43,8 @@ module.exports = {
   },
 
   mongo: {
-    version: '3.4.1',
+    oplog: true,
+//    version: '3.4.1',
     servers: {
       one: {}
     }
