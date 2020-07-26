@@ -27,7 +27,7 @@ module.exports = {
       // TODO: Change to your app's url
       // If you are using ssl, it needs to start with https://
       ROOT_URL: 'https://jkagawa.com',
-      MONGO_URL: 'mongodb://localhost/meteor',
+      MONGO_URL: 'mongodb://localhost:27017/meteor',
       PORT: 3000
 //      MONGO_OPLOG_URL: 'mongodb://localhost/local',
     },
