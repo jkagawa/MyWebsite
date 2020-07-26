@@ -2,19 +2,18 @@
     <div id="container">
 
     <header>
-            <h1>BMI Calculator</h1>
             <ul>
             	<li><a href="/" class="navbutton">Home</a></li>
             	<li><a href="/bmi" class="navbutton bmi currentpage_nav">BMI Calculator</a></li>
-            	<li><a href="/art" class="navbutton art">Art Experiments</a></li>
+            	<li><a href="/art" class="navbutton art">Random Art</a></li>
             </ul>
             <div class="dropdown_container">
-                <div class="dropdown" style="padding: 10px 20px 10px 20px; margin: 6px auto; cursor: pointer; background: #EAEDED; width: 160px;">
-                    Dropdown
+                <div class="dropdown">
+                    <button class="dropbtn">BMI Calculator</button>
                     <div class="dropdown-content">
                       <a href="/">Home</a>
-                      <a href="/bmi">BMI Calculator</a>
-                      <a href="/art">Art Experiments</a>
+                      <a href="/bmi" class="currentpage_nav">BMI Calculator</a>
+                      <a href="/art">Random Art</a>
                     </div>
                 </div> 
             </div>
@@ -61,5 +60,5 @@
 </template>
 
 <template name="calculateBMI">
-  <button>Calculate</button>
+  <button class="calculate_btn">Calculate</button>
 </template>

@@ -18,8 +18,8 @@ header {
 }
 
 header h1 {
-    height: 40px;
-    margin: 10px;
+    margin: 5px;
+    font-size: 16px;
 }
 
 a {
@@ -31,6 +31,7 @@ a {
     padding: 10px 20px 10px 20px; 
     display: inline-block; 
     margin: 6px 3px;
+    font-weight: normal;
 }
 
 .navbutton:hover {
@@ -40,6 +41,7 @@ a {
 
 .currentpage_nav, .currentpage_nav:hover {
 	background: #551A8B !important;
+    color: #FFFFFF !important;
 }
 
 .dropdown_menu {
@@ -70,11 +72,18 @@ ul {
 }
 
 .dropdown {
-    padding: 10px;
     margin: 6px;
     cursor: pointer;
     background: #EAEDED;
     float: right;
+}
+
+.dropbtn {
+    cursor: pointer;
+    padding: 10px;
+    background: #551A8B;
+    color: #FFFFFF;
+    font-size: 16px;
 }
 
 header select {
@@ -104,7 +113,7 @@ ul li:hover ul {
 
 #mid {
 	background-color: #eaeded;
-	margin-top: 110px;
+	margin-top: 50px;
 	padding: 20px 20px 100px 20px;
 	text-align: center;
 	font-size: 16px;
@@ -127,11 +136,6 @@ ul li:hover ul {
   display: none;
 }
 
-@media (max-width: 768px) {
-  header ul     { display: none; }
-  .dropdown_div { display: block; }
-}
-
 .dropdown_container {
     float: left;
     overflow: hidden;
@@ -145,7 +149,7 @@ ul li:hover ul {
 	height: 50px;
 	display: none;
 }
-.dropdown .dropbtn, .dropdown-content, .dropdown_container {
+.dropdown .dropbtn, .dropdown-content, .dropdown_container, .dropbtn {
     border: none;
     outline: none;
     margin: 0;
@@ -158,7 +162,7 @@ ul li:hover ul {
     background: #EAEDED;
     width: 100%;
     float: right;
-    top: 110px;
+    top: 50px;
     right: 0;
 }
 .dropdown-content a {
@@ -168,19 +172,24 @@ ul li:hover ul {
   color: black;
 }
 .dropdown-content a:hover {
-  background: #ddd;
-  color: black;
+  background: #0099CC;
+  color: #FFFFFF;
 }
-.dropdown:hover .dropdown-content {
+.dropbtn:focus + .dropdown-content, .dropdown-content:hover {
     display: block;
-    
 }
 .dropdown:hover {
   background: #555 !important;
   color: white;
 }
 @media (max-width: 768px) {
-  .dropdown_container { display: block; }
+    header ul { display: none; }
+    .dropdown_div { display: block; }
+    .dropdown_container { display: block; }
+    #mid { padding: 20px 10px 100px 10px; }
+}
+@media (max-width: 768px) {
+  
 }
  
 
@@ -196,7 +205,7 @@ input[type="Text"], input[type="number"] {
             border: 1px solid #CCCCCC;
             outline: none;
         }
-        input[type="button"], button {
+        .calculate_btn {
             font-size: 20px;
             background: #551A8B;
             color: #FFFFFF;
@@ -206,7 +215,7 @@ input[type="Text"], input[type="number"] {
             cursor: pointer;
             outline: none;
         }
-        input[type="button"]:hover, button:hover {
+        .calculate_btn:hover {
             background: #7647a2;
         }
         input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { 
